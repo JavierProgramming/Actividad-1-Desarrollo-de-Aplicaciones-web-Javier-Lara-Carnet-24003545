@@ -1,0 +1,39 @@
+import React from 'react';
+import NavbarMenu from './components/NavbarMenu';
+import { Container, Row, Col, Card, Button, Form } from 'react-bootstrap';
+import './styles/styles.scss';
+
+function App() {
+  return (
+    <>
+      <NavbarMenu />
+      <Container>
+        <h1 className="my-4">Mis Tareas y Metas</h1>
+        <Row>
+          <Col md={6}>
+            <Card className="card-custom">
+              <Card.Body>
+                <Card.Title>Agregar Tarea</Card.Title>
+                <Form>
+                  <Form.Group controlId="taskName">
+                    <Form.Label>Nombre de la Tarea</Form.Label>
+                    <Form.Control type="text" placeholder="Escribe una tarea" />
+                  </Form.Group>
+                  <Form.Group controlId="taskDate" className="mt-2">
+                    <Form.Label>Fecha límite</Form.Label>
+                    <Form.Control type="date" />
+                  </Form.Group>
+                  <Button variant="primary" className="btn-custom mt-3">
+                    Agregar Tarea
+                  </Button>
+                </Form>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+    </>
+  );
+}
+
+export default App;
